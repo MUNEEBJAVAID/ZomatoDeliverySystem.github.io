@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.disclaimer-cont {
+    background-color: red;
+}
+
+.disclaimer {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+
+    /* animation properties */
+    animation: my-animation 15s linear infinite;
+}
+
+@keyframes my-animation {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+.header {
+    background-color: #4FA537;
+}
+
+#currentStatus {
+    color: white;
+    font-size: 28px;
+    padding: 24px 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.statuses {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+}
+
+
+.badge {
+    background-color: #5bc03f;
+    font-weight: bold;
+    padding: 4px 16px;
+    border-radius: 4px;
+    margin: 10px;
+    /* display: inline-flex; */
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+#status-time {
+    animation: blinking 2s linear infinite;
+}
+
+@keyframes blinking {
+    50% {
+        opacity: 0.0;
+    }
+}
+
+
+.mapview {
+    height: 280px;
+    width: 100%;
+    background-color: grey;
+}
+
+.mapview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .5;
+}
+
+
+#driver-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 16px;
+    background-color: white;
+}
+
+.driver-into {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.driver-photo,
+.call {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    object-fit: cover;
+}
+
+.call {
+    height: 32px;
+    width: 32px;
+}
+
+.driver-status {
+    padding: 16px;
+    flex: 1;
+}
+
+.driver-msg {
+    padding-top: 2px;
+    font-size: 14px;
+}
+
+.none {
+    display: none;
+}
+
+button {
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid blue;
+    margin: 0 10px;
+    opacity: .8;
+    margin-block: 5px;
+}
+
+button:hover {
+    opacity: 1.0;
+}
+
+
+
+
+@media (max-width:500px) {
+    .disclaimer {
+        overflow: visible;
+    }
+
+    .disclaimer-cont {
+        font-size: 14px;
+    }
+
+    #currentStatus {
+        font-size: 21px;
+    }
+
+    .driver-into {
+        font-size: 15px;
+    }
+
+    .call {
+        height: 28px;
+        width: 28px;
+
+    }
+
+    .driver-msg {
+        font-size: 13px;
+    }
+}
